@@ -16,11 +16,11 @@ jobs:
     name: Build and Deploy
     runs-on: ubuntu-latest
     env:
-      BUCKET: ${{ secretes.BUCKET_NAME }}
+      BUCKET: ${{ secrets.BUCKET_NAME }}
       DIST: dist
       REGION: us-east-1
-      DIST_ID: ${{ secretes.DISTRIBUTION_ID }}
-      DOMAIN_NAME: ${{ secretes.DOMAIN_NAME }}
+      DIST_ID: ${{ secrets.DISTRIBUTION_ID }}
+      DOMAIN_NAME: ${{ secrets.DOMAIN_NAME }}
     
     steps:
       - name: Checkout
